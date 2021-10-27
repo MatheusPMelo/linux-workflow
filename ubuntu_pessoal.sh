@@ -25,22 +25,22 @@ clear
 
 if [ $menu = 1 ]; then
 		clear
-		sudo apt-get update && sudo apt-get upgrade 
+		sudo apt-get update && sudo apt-get upgrade -y
 		#Comando para atualizar os repostitórios e os softwares.
 
 elif [ $menu = 2 ]; then
 		clear
-		sudo apt install snap 
+		sudo apt install snap -y
 		#Comando para baixar o pacote snap.
 
 elif [ $menu = 3 ]; then
 		clear
-		sudo apt install gimp 
+		sudo apt install gimp -y
 		#Comando para baixar gimp.
 
 elif [ $menu = 4 ]; then
 		clear
-		sudo snap install spotify 
+		sudo snap install spotify -y
 		#Comando para baixar Spotify
 
 elif [ $menu = 5 ]; then
@@ -53,7 +53,7 @@ elif [ $menu = 5 ]; then
 
 		sudo apt update
 
-		sudo apt install brave-browser
+		sudo apt install brave-browser -y
 	
 		#Comando para baixar o Brave
 
@@ -75,38 +75,38 @@ elif [ $menu = 7 ]; then
 
 		sudo apt-get update
 
-		sudo apt-get install google-chrome-stable
+		sudo apt-get install google-chrome-stable -y
 
 		#Comando para baixar o Google Chrome
 
 elif [ $menu = 8 ]; then
 		clear
-		sudo snap install code --classic
+		sudo snap install code --classic -y
 
 		#comando para baixar o VSCode
 
 elif [ $menu = 9 ]; then
 		clear
 		
-		sudo snap install sublime-text --classic
+		sudo snap install sublime-text --classic -y
 		#Comando para baixar o Sublime Text
 
 elif [ $menu = 10 ]; then
 		clear
 
-		sudo snap install pycharm-professional --classic
+		sudo snap install pycharm-professional --classic -y
 		#Comando para baixar o PyCharm
 
 elif [ $menu = 11 ]; then
 		clear
 
-		sudo snap install intellij-idea-ultimate --classic
+		sudo snap install intellij-idea-ultimate --classic -y
 		#Comando para baixar o intelij IDEA
 
 elif [ $menu = 12 ]; then
 		clear
 
-		sudo snap install android-studio --classic
+		sudo snap install android-studio --classic -y
 		#Comando para baixar o Android Studio
 
 elif [ $menu = 13 ]; then
@@ -120,7 +120,7 @@ elif [ $menu = 13 ]; then
 
 		sudo apt-get update
 
-		sudo apt-get install teamviewer
+		sudo apt-get install teamviewer -y
 		#Comando para baixar o team Viewer
 
 
@@ -133,7 +133,7 @@ elif [ $menu = 14 ]; then
 elif [ $menu = 15 ]; then
 		clear
 
-		sudo apt-get install git-all
+		sudo apt-get install git-all -y
 		#Comando para baixar o GIT
 
 else
