@@ -2,7 +2,7 @@
 
 clear
 
-echo "=====MENU====="
+echo "=======MENU======="
 echo "1 - atualização geral"
 echo "2 - Baixar o Snap"
 echo "3 - Baixar o Gimp"
