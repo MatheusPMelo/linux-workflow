@@ -33,25 +33,6 @@ clear
 sudo snap install code --classic -y
 #comando para baixar o VSCode
 clear
-sudo snap install sublime-text --classic -y
-#Comando para baixar o Sublime Text
-clear
-sudo snap install pycharm-professional --classic -y
-#Comando para baixar o PyCharm
-clear
-sudo snap install intellij-idea-ultimate --classic -y
-#Comando para baixar o intelij IDEA
-clear
-sudo snap install android-studio --classic -y
-#Comando para baixar o Android Studio
-clear
-sudo sh -c "echo 'deb http://linux.teamviewer.com/deb stable main' >> /etc/apt/sources.list.d/teamviewer.list"
-sudo sh -c "echo 'deb http://linux.teamviewer.com/deb preview main' >> /etc/apt/sources.list.d/teamviewer.list"
-wget -q https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc -O- | sudo apt-key add -
-sudo apt-get update -y
-sudo apt-get install teamviewer -y
-#Comando para baixar o team Viewer
-clear
 sudo apt install gnome-tweak-tool -y
 #Comando para baixar o gnome tweak tool
 clear
@@ -59,3 +40,29 @@ sudo apt-get install git-all -y
 #Comando para baixar o GIT
 sudo apt-get update && sudo apt-get upgrade -y
 clear
+#baixando nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.bashrc
+nvm install 16.14.2
+clear
+#baixando vuejs
+npm i -g @vue/cli
+clear
+#baixando composer 
+sudo apt-get install composer -y
+clear
+#baixando lampp
+sudo apt-get install lamp-server^
+sudo chmod 777 /var/www/html
+cd /var/www/html
+wget https://files.phpmyadmin.net/phpMyAdmin/5.1.3/phpMyAdmin-5.1.3-all-languages.zip
+unzip phpMyAdmin-5.1.3-all-languages.zip
+mv phpMyAdmin-5.1.3-all-languages phpmyadmin
+rm -rf phpMyAdmin-5.1.3-all-languages.zip
+cd ~
+clear
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt autoremove
+clear
+echo 'TUDO PRONTO!'
+
