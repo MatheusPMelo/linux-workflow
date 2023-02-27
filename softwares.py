@@ -42,6 +42,8 @@ def installNeovim() :
         os.system("wget -O neovim.deb https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb")
         os.system("sudo apt install ./neovim.deb")
         os.system("rm -rf ~/neovim.deb")
+        os.system("LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)")
+
     except Exception as e :
         print(f"Opss! Houve um erro na instalação: {e}")
         next = input("Proceguir? [s/n]")
@@ -199,17 +201,6 @@ def installFlatRemixLockScreen() :
             return exit()
 
 
-def installLunarVim() :
-    clear()
-    try :
-        os.system("LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)")
-    except Exception as e :
-        print(f"Opss! Houve um problema na instalação do lunarvim: {e}")
-        next = input("Proceguir? [s/n]")
-
-        if next == 'N' or next == 'n' :
-            return exit()
-
 def installPhp() :
     clear()
 
@@ -228,10 +219,7 @@ def installComposer() :
     clear()
 
     try :
-        os.system(`php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`)
-        os.system(`php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"`)
-        os.system("php composer-setup.php")
-        os.system(`php -r "unlink('composer-setup.php');"`)
+        os.system("sudo apt-get install composer -y")
     except Exception as e :
         print(f"Opss! Houve um problema na instalação do lunarvim: {e}")
         next = input("Proceguir? [s/n]")
