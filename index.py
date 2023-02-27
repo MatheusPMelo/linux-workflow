@@ -30,7 +30,6 @@ if option == '1' :
     installBrave()
     installVim()
     installNeovim()
-    installLunarVim()
     installFlatRemix()
     installFlatRemixLockScreen()
     installFlatRemixGTK()
@@ -54,7 +53,6 @@ if option == '2' :
     print("# 13 - Tema Flat Remix GTK")
     print("# 14 - Tema Flat Remix Icon")
     print("# 15 - Flat Remix Lockscreen")
-    print("# 16 - Lunarvim          #")
     print("##########################")
     print("\n")
 
@@ -108,8 +106,6 @@ if option == '2' :
     if command == '15' :
         installFlatRemixLockScreen()
 
-    if command == '16' :
-        installLunarVim()
 
 if option == '3' :
     os.system('sudo apt-get update && sudo apt-get upgrade -y')
