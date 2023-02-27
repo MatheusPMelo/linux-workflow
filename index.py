@@ -41,3 +41,6 @@ if option == '2' :
 
     if command == '3' :
         installBrave()
+
+if option == '3' :
+    os.system('sudo apt-get update && sudo apt-get upgrade -y')
