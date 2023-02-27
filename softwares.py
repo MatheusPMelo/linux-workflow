@@ -209,3 +209,34 @@ def installLunarVim() :
 
         if next == 'N' or next == 'n' :
             return exit()
+
+def installPhp() :
+    clear()
+
+    try :
+        os.system('sudo add-apt-repository ppa:ondrej/php')
+        os.system('sudo apt-get update')
+        os.system('sudo apt-get install php7.4-fpm php7.4-cli php7.4-bcmath php7.4-bz2 php7.4-curl php7.4-dba php7.4-gd php7.4-imap php7.4-intl php7.4-json php7.4-mbstring php7.4-mysql php7.4-odbc php7.4-opcache php7.4-pgsql php7.4-snmp php7.4-soap php7.4-tidy php7.4-xml php7.4-zip')
+    except Exception as e :
+        print(f"Opss! Houve um problema na instalação do lunarvim: {e}")
+        next = input("Proceguir? [s/n]")
+
+        if next == 'N' or next == 'n' :
+            return exit()
+
+def installComposer() :
+    clear()
+
+    try :
+        os.system(`php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`)
+        os.system(`php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"`)
+        os.system("php composer-setup.php")
+        os.system(`php -r "unlink('composer-setup.php');"`)
+    except Exception as e :
+        print(f"Opss! Houve um problema na instalação do lunarvim: {e}")
+        next = input("Proceguir? [s/n]")
+
+        if next == 'N' or next == 'n' :
+            return exit()
+
+
