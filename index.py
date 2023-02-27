@@ -18,6 +18,7 @@ if option == '0' :
     exit()
 
 if option == '1' :
+    os.system('sudo apt-get update && sudo apt-get upgrade -y')
     installCurl()
     installGit()
     installNode()
