@@ -3,7 +3,14 @@ import os
 
 def installGit() :
     clear()
-    os.system("sudo apt-get install git -y")
+    try :
+        os.system("sudo apt-get install git -y")
+    except Exception as e :
+        print(f"Opss! Houve um erro: na instalação do git: {e}")
+        next = input("Proceguir? [s/n]")
+
+        if next == 'N' or next == 'n' :
+            return exit()
 
 def installPacSnap() :
     clear()
