@@ -2,7 +2,7 @@ from ..utils.main import *
 from .php import phpInstall
 import subprocess
 
-def installLaravel() :
+def composerInstall() :
     try:
         subprocess.check_call(['php', '--version'])
         system("wget https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer -O - -q | php -- --quiet")
@@ -18,7 +18,7 @@ def installLaravel() :
 
         if command in ['S', 's', 'Y', 'y'] :
             phpInstall()
-            installLaravel()
+            composerInstall()
         else :
             exit()
         print("PHP não está instalado.")

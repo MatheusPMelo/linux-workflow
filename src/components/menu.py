@@ -8,7 +8,7 @@ def showMenu(error:bool = False):
     print('Menu de instalação')
     print('1 - Instalação completa do workflow')
     print('2 - Instalar PHP')
-    print('3 - Instalar Laravel')
+    print('3 - Instalar Composer')
     print('4 - Instalar ASDF-VM')
     print('5 - Apache')
 
@@ -17,7 +17,7 @@ def menu(error:bool = False) :
 
     command:int = int(input('Digite uma opção: '))
     
-    if command not in [1, 2, 3, 4] :
+    if command not in [1, 2, 3, 4, 5] :
         return menu(True)
 
     return command
